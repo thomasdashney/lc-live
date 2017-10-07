@@ -57,7 +57,8 @@ const keyHandlers = {
   'right': performance.incrementScene.bind(performance),
   'left': performance.decrementScene.bind(performance),
   'down': performance.incrementSong.bind(performance),
-  'up': performance.decrementSong.bind(performance)
+  'up': performance.decrementSong.bind(performance),
+  'q': () => process.exit(0)
 }
 
 process.stdin.on('keypress', (ch, key) => {
