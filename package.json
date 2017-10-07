@@ -1,0 +1,22 @@
+{
+  "name": "lc-live",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "start": "node bin/app",
+    "debug": "MODE=debug npm start",
+    "list-io": "node bin/list-io"
+  },
+  "author": "Thomas Dashney",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomasdashney/lc-live.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "keypress": "^0.2.1",
+    "lodash": "^4.17.4",
+    "midi": "^0.9.5"
+  }
+}
