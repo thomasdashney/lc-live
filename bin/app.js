@@ -1,10 +1,18 @@
 const keypress = require('keypress')
 const { mapValues } = require('lodash')
-const setlistConfig = require('../config/setlist')
-const songConfig = require('../config/songs')
-const outputDevicesConfig = require('../config/output-devices')
 const logger = require('../lib/logger')
 const midiManager = require('../lib/midi-manager')
+const yaml = require('js-yaml')
+const fs = require('fs')
+const { resolve } = require('path')
+
+const loadYmlFromRelativePath = relativePath => {
+  return yaml.safeLoad(fs.readFileSync(resolve(__dirname, relativePath), 'utf8'))
+}
+
+const setlistConfig = loadYmlFromRelativePath('../config/setlist.yml')
+const songConfig = loadYmlFromRelativePath('../config/songs.yml')
+const outputDevicesConfig = require('../config/output-devices')
 
 const Scene = require('../lib/scene')
 const Song = require('../lib/song')
