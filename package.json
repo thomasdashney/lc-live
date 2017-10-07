@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "",
   "scripts": {
-    "start": "node bin/app",
+    "start": "node lib/index",
     "debug": "MODE=debug npm start",
     "list-io": "node bin/list-io"
   },
