@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+- 8.3.0
+addons: # https://github.com/justinlatimer/node-midi/blob/a8ad2e30ee9c848e985ff017c819cb4ecf3b79e1/.travis.yml#L13
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.8
+    - libasound2-dev
+script:
+  - export CXX=g++-4.8
+  - npm install
+cache:
+  directories:
+  - node_modules
+branches:
+  only:
+  - master
+script: npm test -- --coverage --ci --runInBand
