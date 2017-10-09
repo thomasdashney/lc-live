@@ -1,15 +1,21 @@
 psych:
   name: 'Psych'
+  programs:
+    mixer: 1
+    nord: '1:1'
   scenes:
-    - name: Intro
+    - name: Intro/Verse # ideally this can trigger hold + notes :O
       programs:
-        mixer: 1
-        prophet: 136
-        nord: '1:1'
-        juno: '5:8'
+        prophet: 134
     - name: Keyboard Solo
       programs:
         prophet: 135
+    - name: Verse 2
+      programs:
+        prophet: 134
+    - name: Breakdown/Outro
+      programs:
+        prophet: 134
 feel an emotion:
   name: Feel an Emotion
   scenes:
@@ -17,7 +23,6 @@ feel an emotion:
       programs:
         prophet: 134
         nord: '1:2'
-        juno: '2:4'
     - name: 'Keyboard Solo'
       programs:
         prophet: 480
