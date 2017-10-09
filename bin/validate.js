@@ -3,7 +3,7 @@ const fs = require('fs')
 const { resolve } = require('path')
 const { pick } = require('lodash')
 const tv4 = require('tv4')
-const { createSongsSchema, createSetlistSchema } = require('../lib/config-schemas')
+const { createSongsSchema, createSetlistSchema } = require('../lib/app/config-schemas')
 
 const formatError = error => pick(error, ['message', 'params', 'dataPath'])
 
