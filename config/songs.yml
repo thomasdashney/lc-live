@@ -6,7 +6,7 @@ psych:
         mixer: 1
         prophet: 136
         nord: '1:1'
-        juno: 6
+        juno: '5:8'
     - name: Keyboard Solo
       programs:
         prophet: 135
@@ -17,7 +17,7 @@ feel an emotion:
       programs:
         prophet: 134
         nord: '1:2'
-        juno: 6
+        juno: '2:4'
     - name: 'Keyboard Solo'
       programs:
         prophet: 480
