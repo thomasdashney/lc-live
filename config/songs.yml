@@ -4,27 +4,122 @@ psych:
     mixer: 1
     nord: '1:1'
   scenes:
-    - name: Intro/Verse # ideally this can trigger hold + notes :O
+    -
+      name: Arpeggiator # ideally this can trigger hold + notes :O
       programs:
         prophet: 134
-    - name: Keyboard Solo
+    -
+      name: Keyboard Solo
       programs:
         prophet: 135
-    - name: Verse 2
+    -
+      name: Arpeggiator
       programs:
         prophet: 134
-    - name: Breakdown/Outro
+    -
+      name: Outro Pad
       programs:
         prophet: 134
+
 feel an emotion:
   name: Feel an Emotion
+  programs:
+    mixer: 2
+    nord: '1:2'
+
+city escape:
+  name: City Escape
+  programs:
+    mixer: 3 # TODO
+    nord: '1:3'
   scenes:
-    - name: 'Intro'
+    -
+      name: Ambient
       programs:
-        prophet: 134
-        nord: '1:2'
-    - name: 'Keyboard Solo'
+        prophet: 100 # TODO
+    -
+      name: Shots
       programs:
-        prophet: 480
+        prophet: 100 # TODO
+    -
+      name: Bridge
+      programs:
+        prophet: 100 # TODO
+    -
+      name: Shots
+      programs:
+        prophet: 100 # TODO (same as verse 2)
+
+catacombs:
+  name: Catacombs
+  programs:
+    mixer: 4 # TODO
+    nord: '1:4'
+    prophet: 100 # TODO
+
+quarters:
+  name: Quarters
+  programs:
+    mixer: 5 # TODO
+    nord: '1:5'
+
+shadow:
+  name: Shadow
+  programs:
+    mixer: 6 # TODO
+    nord: '1:6'
+  scenes:
+    -
+      name: Ambient
+      programs:
+        prophet: 1 # TODO
+    -
+      name: Phaser
+      programs:
+        prophet: 2 # TODO
+    -
+      name: Ambient
+      programs:
+        prophet: 1 # TODO
+    -
+      name: Phaser
+      programs:
+        prophet: 2 # TODO
+    -
+      name: Solo Saw
+      programs:
+        prophet: 3 # TODO
+
+trails:
+  name: Trails
+  programs:
+    mixer: 7 # TODO
+    nord: '2:1'
+    prophet: 5 # TODO
+
 livin asleep:
   name: Livin Asleep
+  programs:
+    mixer: 8 # TODO
+    nord: '2:2'
+    prophet: 6 # TODO
+
+mindmaker:
+  name: Mindmaker
+  programs:
+    mixer: 9 # TODO
+    nord: '2:3'
+    prophet: 7 # TODO
+
+elegy:
+  name: Elegy
+  programs:
+    mixer: 10 # TODO
+    nord: '2:4'
+    prophet: 9 # TODO
+
+my days are numbered:
+  name: My Days Are Numbered
+  programs:
+    mixer: 11 # TODO
+    nord: '2:5'

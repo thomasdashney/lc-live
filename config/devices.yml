@@ -5,7 +5,7 @@ inputs:
 outputs:
   mixer:
     port: IAC Driver IAC Bus 2
-    channel: 1
+    channel: 2 # TODO: CHANGE
   nord:
     port: IAC Driver IAC Bus 2
     channel: 1
@@ -18,3 +18,6 @@ outputs:
     port: IAC Driver IAC Bus 2
     channel: 11
     programDeserializer: juno
+  sampler:
+    port: IAC Driver IAC Bus 2
+    channel: 16 # TODO: change
