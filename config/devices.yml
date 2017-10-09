@@ -9,15 +9,15 @@ outputs:
   nord:
     port: IAC Driver IAC Bus 2
     channel: 1
-    programDeserializer: nord
+    programFormat: nord
   prophet:
     port: IAC Driver IAC Bus 2
     channel: 10
-    programDeserializer: prophet6
+    programFormat: prophet6
   juno:
     port: IAC Driver IAC Bus 2
     channel: 11
-    programDeserializer: juno
+    programFormat: juno
   sampler:
     port: IAC Driver IAC Bus 2
     channel: 16 # TODO: change
