@@ -1,0 +1,20 @@
+inputs:
+  nord:
+    port: IAC Driver IAC Bus 1
+
+outputs:
+  mixer:
+    port: IAC Driver IAC Bus 2
+    channel: 1
+  nord:
+    port: IAC Driver IAC Bus 2
+    channel: 1
+    programDeserializer: nord
+  prophet:
+    port: IAC Driver IAC Bus 2
+    channel: 10
+    programDeserializer: prophet6
+  juno:
+    port: IAC Driver IAC Bus 2
+    channel: 11
+    programDeserializer: juno

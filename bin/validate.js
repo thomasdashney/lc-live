@@ -3,7 +3,7 @@ const fs = require('fs')
 const { resolve } = require('path')
 const { pick } = require('lodash')
 const tv4 = require('tv4')
-const { createSongsSchema, createSetlistSchema } = require('../lib/app/config-schemas')
+const { devicesSchema, createSongsSchema, createSetlistSchema } = require('../lib/app/config-schemas')
 
 const formatError = error => pick(error, ['message', 'params', 'dataPath'])
 
@@ -13,24 +13,19 @@ const loadYmlFromRelativePath = relativePath => {
 
 const setlistConfig = loadYmlFromRelativePath('../config/setlist.yml')
 const songsConfig = loadYmlFromRelativePath('../config/songs.yml')
-const outputDevices = require('../lib/devices/output-devices')
+const devicesConfig = loadYmlFromRelativePath('../config/devices.yml')
 
-const songsSchema = createSongsSchema(Object.keys(outputDevices))
-const songsAreValid = tv4.validate(songsConfig, songsSchema)
-if (songsAreValid) {
-  console.log('Songs are valid')
-} else {
-  console.error('Songs are invalid')
-  console.error(formatError(tv4.error))
-  process.exit(0)
+function validateConfig (name, config, schema) {
+  const valid = tv4.validate(config, schema)
+  if (valid) {
+    console.log(`${name}: valid`)
+  } else {
+    console.error(`${name}: invalid`)
+    console.error(formatError(tv4.error))
+    process.exit(0)
+  }
 }
 
-const setlistSchema = createSetlistSchema(Object.keys(songsConfig))
-const setlistIsValid = tv4.validate(setlistConfig, setlistSchema)
-if (setlistIsValid) {
-  console.log('Setlist is valid')
-} else {
-  console.error('Setlist is invalid')
-  console.error(formatError(tv4.error))
-  process.exit(0)
-}
+validateConfig('Devices', devicesConfig, devicesSchema)
+validateConfig('Songs', songsConfig, createSongsSchema(Object.keys(devicesConfig.outputs)))
+validateConfig('Setlist', setlistConfig, createSetlistSchema(Object.keys(songsConfig)))
