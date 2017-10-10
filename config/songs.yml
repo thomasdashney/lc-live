@@ -5,7 +5,7 @@ psych:
     nord: '1:1'
   scenes:
     -
-      name: Arpeggiator # ideally this can trigger hold + notes :O
+      name: Arpeggiator
       programs:
         prophet: 134
     -
@@ -103,6 +103,7 @@ livin asleep:
     mixer: 8 # TODO
     nord: '2:2'
     prophet: 6 # TODO
+    juno: '3:1' # TODO
 
 mindmaker:
   name: Mindmaker

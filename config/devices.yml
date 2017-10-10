@@ -1,23 +1,25 @@
 inputs:
   nord:
-    port: IAC Driver IAC Bus 1
+    port: MIDISPORT 4x4 Port A
+  footswitch:
+    port: MIDISPORT 4x4 Port B
 
 outputs:
   mixer:
-    port: IAC Driver IAC Bus 2
+    port: MIDISPORT 4x4 Port A
     channel: 2 # TODO: CHANGE
   nord:
-    port: IAC Driver IAC Bus 2
+    port: MIDISPORT 4x4 Port B
     channel: 1
-    programDeserializer: nord
+    programFormat: nord
   prophet:
-    port: IAC Driver IAC Bus 2
+    port: MIDISPORT 4x4 Port B
     channel: 10
-    programDeserializer: prophet6
+    programFormat: prophet6
   juno:
-    port: IAC Driver IAC Bus 2
+    port: MIDISPORT 4x4 Port C
     channel: 11
-    programDeserializer: juno
+    programFormat: juno
   sampler:
-    port: IAC Driver IAC Bus 2
+    port: MIDISPORT 4x4 Port C
     channel: 16 # TODO: change
