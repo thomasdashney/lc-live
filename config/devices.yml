@@ -7,7 +7,8 @@ inputs:
 outputs:
   mixer:
     port: MIDISPORT 4x4 Port A
-    channel: 2 # TODO: CHANGE
+    channel: 1
+    programFormat: mixer
   nord:
     port: MIDISPORT 4x4 Port B
     channel: 1
@@ -22,4 +23,4 @@ outputs:
     programFormat: juno
   sampler:
     port: MIDISPORT 4x4 Port C
-    channel: 16 # TODO: change
+    channel: 1
